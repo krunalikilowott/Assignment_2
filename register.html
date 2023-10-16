@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #cdbdeb;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: xx-large;
+            color: #050505;
+        }
+
+        .login-container {
+            background-color: rgba(222, 99, 99, 0.9);
+            width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="address"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #131313;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: green;
+        }
+    </style>
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+
+            var lengthRegex = /.{8,}/;   
+            var uppercaseRegex = /[A-Z]/;
+            var digitRegex = /\d/;     
+            if (!lengthRegex.test(password)) {
+                alert("Password must be at least 8 characters long.");
+                return false;
+            }
+
+            if (!uppercaseRegex.test(password) || !digitRegex.test(password)) {
+                alert("Password must contain at least one uppercase letter and one digit.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>REGISTER</h2>
+        <form method="POST" action="registration.php"> 
+        
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address" required><br><br>
+
+            <label for="number">Contact:</label>
+            <input type="text" name="number" id="number" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required><br>
+
+            <input type="submit" name="submit" value="Register">
+        
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+</body>
+</html>

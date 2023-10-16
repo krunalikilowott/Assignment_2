@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkgray;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #login-form {
+            background-color: whitesmoke;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            width: 300px;
+        }
+
+        #email,
+        #password {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #080808;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #submit-button {
+            background-color: rgb(14, 71, 90);
+            color: rgb(241, 235, 235);
+            padding: 12px 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        #submit-button:hover {
+            background-color: green;
+        }
+
+        #login-form h2 {
+            font-size: 2rem; 
+            color: rgb(196, 112, 51);
+        }
+
+        #login-form label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            color: purple;
+        }
+
+        #login-form a {
+            color: green;
+            text-decoration: none; 
+        }
+
+        #login-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-form">
+        <h2>LOGIN</h2>
+        <form action="login.php" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <input type="submit" id="submit-button" value="Login">
+        </form>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+</body>
+</html>

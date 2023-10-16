@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('img.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(25, 50, 77, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        main {
+            max-width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(190, 237, 170, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 50px;
+            margin-bottom: 100;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px; 
+            background-color: #0c0c0c;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px; 
+            font-size: 18px; 
+            transition: background-color 0.15s ease;
+        
+        }
+        .button:active {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+    
+    <main>
+        <div class="button-container">
+            <a href="register.html" class="button">Register</a><br><br>
+            <a href="login.html" class="button">Login</a><br><br>
+            <a href="welcome.php" class="button">Fetch</a>
+        </div>
+    </main>
+</body>
+</html>
